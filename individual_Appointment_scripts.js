@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
-// @author       @Itsmaarouf
+// @author       @elkabouss
 // @match        *://*.blsspainmorocco.com/*
 // @match        *://*.blsspainvisa.com/*
 // @grant        none
@@ -40,24 +40,18 @@
             //########################################################################
             //############### THIS IS THE PART YOU MUST CHANGE #######################
             //########################################################################
-            var lastNames ="Last Name";
-            var firstNames ="First Name";
-            var births ="yyyy-mm-dd";//Date Of Birth
-            var passNumbers ="Passport Number";//Passport Number
-            var issueDates ="yyyy-mm-dd";//Passport Issue Date
-            var expiryDates ="yyyy-mm-dd";//Passport Expiry Date
-            var pptissuePalaces ="city name";//Passport Issue Place
+             Issue Place
             var franN ="TG700******";
             //########################################################################
             //########################################################################
 
-            document.getElementById('first_name').value=firstNames;
-            document.getElementById('last_name').value=lastNames;
-            $('#dateOfBirth').datepicker("update" ,births);
-            document.getElementById('passport_no').value=passNumbers;
-            $('#pptIssueDate').datepicker("update" ,issueDates);
-            $('#pptExpiryDate').datepicker("update" ,expiryDates);
-            document.getElementById('pptIssuePalace').value=pptissuePalaces;
+            document.getElementById('elkabouss').value=firstNames;
+            document.getElementById('rachid').value=lastNames;
+            $('#dateOfBirth').datepicker(27/08/1985);
+            document.getElementById(DH6507049).value=passNumbers;
+            $('#pptIssueDate').datepicker(27/09/2018);
+            $('#pptExpiryDate').datepicker(27/09/2023);
+            document.getElementById('CADABLANCA').value=pptissuePalaces;
             var audio = new Audio('https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-the-sound-pack-tree/tspt_german_ambulance_sirens_wailing_loop_041.mp3');
             audio.play();
             document.getElementById("app_time").selectedIndex = document.getElementById('app_time').length-1;
