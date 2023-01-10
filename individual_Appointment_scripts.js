@@ -1,106 +1,130 @@
+
+c'est maaroufwork
+/
+bls_spain_visa_appointment_scripts
+Public
+Code
+Problèmes
+2
+Demandes d'extraction
+Actions
+Projets
+Sécurité
+Connaissances
+bls_spain_visa_appointment_scripts/ scripts_de_rendez- vous_individuels.js
+@itsmaaroufwork
+itsmaaroufwork Mettre à jour individual_Appointment_scripts.js
+ 1 contributeur
+112 lignes (106 sloc)  4,93 Ko
 // ==UserScript==
-// @name         individual test
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       @elkabouss
-// @match        *://*.blsspainmorocco.com/*
-// @match        *://*.blsspainvisa.com/*
-// @grant        none
+// @nom          test individuel
+// @espace de noms     http://tampermonkey.net/
+// @version       0.1
+// @description   essaie de conquérir le monde !
+// @auteur        @Itsmaarouf
+// @match         *://*.blsspainmorocco.com/*
+// @match         *://*.blsspainvisa.com/*
+// @accorder         aucun
 // ==/UserScript==
-//---------------------------------------------------------------------------------------------------------------------------
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-(function sayHi() {
-    'use strict';
-     let code = "";
-    const Days = [];
-    for(var i = 0; i<=document.scripts.length; i++){
-        if (document.scripts[i].text.indexOf("available_dates") != -1) {
-        code = document.scripts[i].text;
-            doMagic();
+//------------------------------------------------------------- -------------------------------------------------- -------------------------
+//////////////////////////////////////////////// //////////////////////////////////////////////// //
+( fonction  direSalut ( )  {
+    'utiliser strictement' ;
+     laisser  code  =  "" ;
+    const  Jours  =  [ ] ;
+    for ( var  je  =  0 ;  je <= document . scripts . longueur ;  je ++ ) {
+        if  ( document . scripts [ i ] . text . indexOf ( "available_dates" )  !=  - 1 )  {
+        code  =  document . scripts [ je ] . texte ;
+            doMagie ( ) ;
         }
     }
-    function doMagic() {
-    var bgn = code.indexOf("available_dates");
-    var end = code.indexOf("fullCapicity_dates");
-    var table = code.slice(bgn+20, end-9);
-    if (table !== ""){
-        var datee = table.slice(0,10);
-        var dd = datee.slice(0,2);
-        var mm = datee.slice(3,5);
-        var yyyy = datee.slice(6,10);
-        var dateeFin = [yyyy, mm, dd];
-        var finDate= dateeFin.join("-");
-        if(document.getElementById("app_date").value.length === 0 && finDate !== "")
+    fonction  doMagique ( )  {
+    var  bgn  =  code . indexOf ( "dates_disponibles" ) ;
+    var  fin  =  code . indexOf ( "fullCapicity_dates" ) ;
+    var  table  =  code . tranche ( bgn + 20 ,  fin - 9 ) ;
+    si  ( tableau  !==  "" ) {
+        var  date  =  table . tranche ( 0 , 10 ) ;
+        var  jj  =  datee . tranche ( 0 , 2 ) ;
+        var  mm  =  date . tranche ( 3 , 5 ) ;
+        var  aaaa  =  date . tranche ( 6 , 10 ) ;
+        var  dateeFin  =  [ aaaa ,  mm ,  jj ] ;
+        var  finDate =  dateeFin . joindre ( "-" ) ;
+        if ( document . getElementById ( "app_date" ) . value . length  ===  0  &&  finDate  !==  "" )
         {
-            $('#app_date').datepicker("update" ,finDate);
+            $ ( '#app_date' ) . datepicker ( "mise à jour"  , finDate ) ;
 
-        }else
+        } sinon
         {
-            //########################################################################
-            //############### THIS IS THE PART YOU MUST CHANGE #######################
-            //########################################################################
-             Issue Place
-            var franN ="TG700******";
-            //########################################################################
-            //########################################################################
+            //############################################### ########################
+            //############### C'EST LA PIÈCE QUE VOUS DEVEZ CHANGER #######################
+            //############################################### ########################
+            var  lastNames  = "Nom de famille" ;
+            var  firstNames  = "Prénom" ;
+            var  naissances  = "aaaa-mm-jj" ; //Date de naissance
+            var  passNumbers  = "Numéro de passeport" ; //Numéro de passeport
+            var  issueDates  = "aaaa-mm-jj" ; //Date de délivrance du passeport
+            var  dateexpiration  = "aaaa-mm-jj" ; //Date d'expiration du passeport
+            var  pptissuePalaces  = "nom de la ville" ; // Lieu de délivrance du passeport
+            var  franN  = "TG700******" ;
+            //############################################### ########################
+            //############################################### ########################
 
-            document.getElementById('elkabouss').value=firstNames;
-            document.getElementById('rachid').value=lastNames;
-            $('#dateOfBirth').datepicker(27/08/1985);
-            document.getElementById(DH6507049).value=passNumbers;
-            $('#pptIssueDate').datepicker(27/09/2018);
-            $('#pptExpiryDate').datepicker(27/09/2023);
-            document.getElementById('CADABLANCA').value=pptissuePalaces;
-            var audio = new Audio('https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-the-sound-pack-tree/tspt_german_ambulance_sirens_wailing_loop_041.mp3');
-            audio.play();
-            document.getElementById("app_time").selectedIndex = document.getElementById('app_time').length-1;
-            document.getElementById("VisaTypeId").selectedIndex = "1";
-            if (document.getElementById('fran') !== null){
-                document.getElementById('fran').value=franN;
+            documenter . getElementById ( 'first_name' ) . valeur = prénoms ;
+            documenter . getElementById ( 'nom_de_famille' ) . valeur = nom_de_famille ;
+            $ ( '#dateDeBirth' ) . datepicker ( "mise à jour"  , naissances ) ;
+            documenter . getElementById ( 'passport_no' ) . valeur = passNumbers ;
+            $ ( '#pptIssueDate' ) . datepicker ( "mise à jour"  , issueDates ) ;
+            $ ( '#pptDateExpiry' ) . datepicker ( "mise à jour"  , dateexpiration ) ;
+            documenter . getElementById ( 'pptIssuePalace' ) . valeur = pptissuePalaces ;
+            var  audio  =  new  Audio ( 'https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-the-sound-pack-tree/tspt_german_ambulance_sirens_wailing_loop_041.mp3' ) ;
+            audio . jouer ( ) ;
+            documenter . getElementById ( "app_time" ) . index_sélectionné  =  document . getElementById ( 'app_time' ) . longueur - 1 ;
+            documenter . getElementById ( "VisaTypeId" ) . IndexSélectionné  =  "1" ;
+            if  ( document . getElementById ( 'fran' )  !==  null ) {
+                documenter . getElementById ( 'fran' ) . valeur = franN ;
             }
-            if (document.getElementById("passportType") !== null){
-                document.getElementById("passportType").selectedIndex = "7";
+            if  ( document . getElementById ( "passportType" )  !==  null ) {
+                documenter . getElementById ( "passportType" ) . IndexSélectionné  =  "7" ;
             }
-            if (document.getElementById("vasId12") !== null){
-              $("#vasId12").prop("checked", true);
+            if  ( document . getElementById ( "vasId12" )  !==  null ) {
+              $ ( "#vasId12" ) . prop ( "vérifié" ,  vrai ) ;
               }
         }
     }
-    if(document.getElementById("app_date").value.length === 0)
+    if ( document . getElementById ( "app_date" ) . value . length  ===  0 )
         {
-            setTimeout(function(){window.location.reload(1);}, 30* 1000);;
+            setTimeout ( fonction ( ) { fenêtre . emplacement . recharge ( 1 ) ; } ,  30 *  1000 ) ; ;
         }
- //   ----------------------------------------------------------------------------------------------------
- // PARTI AUTO SUBMIT
+ // ------------------------------------------------ -------------------------------------------------- --
+ // PARTI SOUMETTRE AUTOMATIQUEMENT
 
- function clicksubmit() {
-    if (
-        document.getElementById("app_date").value !== "" &&
-        document.getElementById("app_time").value !== "" &&
-        document.getElementById("VisaTypeId").value !== "" &&
-        document.getElementById("first_name").value !== "" &&
-        document.getElementById('last_name').value !== "" &&
-        document.getElementById("dateOfBirth").value !== "" &&
-        document.getElementById("passportType").value !== "" &&
-        document.getElementById('passport_no').value !== "" &&
-        document.getElementById("pptIssueDate").value !== "" &&
-        document.getElementById('pptExpiryDate').value !== "" &&
-        document.getElementById("pptIssuePalace").value !== ""
+ fonction  clicksubmit ( )  {
+    si  (
+        documenter . getElementById ( "app_date" ) . valeur  !==  ""  &&
+        documenter . getElementById ( "app_time" ) . valeur  !==  ""  &&
+        documenter . getElementById ( "VisaTypeId" ) . valeur  !==  ""  &&
+        documenter . getElementById ( "prénom" ) . valeur  !==  ""  &&
+        documenter . getElementById ( 'nom_de_famille' ) . valeur  !==  ""  &&
+        documenter . getElementById ( "dateOfBirth" ) . valeur  !==  ""  &&
+        documenter . getElementById ( "passportType" ) . valeur  !==  ""  &&
+        documenter . getElementById ( 'passport_no' ) . valeur  !==  ""  &&
+        documenter . getElementById ( "pptIssueDate" ) . valeur  !==  ""  &&
+        documenter . getElementById ( 'pptExpiryDate' ) . valeur  !==  ""  &&
+        documenter . getElementById ( "pptIssuePalace" ) . valeur  !==  ""
 
-        ) {
-            console.log('click SUBMIT');
-            document.getElementsByClassName("btn primary-btn")[0].click();
+        )  {
+            consoler . log ( 'cliquez sur SOUMETTRE' ) ;
+            documenter . getElementsByClassName ( "btn primaire-btn" ) [ 0 ] . cliquez ( ) ;
             }
     }
-    var stopconsubmit = setInterval(clicksubmit, 10*1000);
+    var  stopconsubmit  =  setInterval ( clicksubmit ,  10 * 1000 ) ;
 
-    document.getElementsByClassName("btn primary-btn")[0].onclick = function () {
-        'use strict'
-        console.log('STOP CLICKING SUBMIT');
-        clearTimeout(stopconsubmit);
+    documenter . getElementsByClassName ( "btn primaire-btn" ) [ 0 ] . onclick  =  fonction  ( )  {
+        'utiliser strictement'
+        consoler . log ( 'ARRÊTER DE CLIQUER SUR SOUMETTRE' ) ;
+        clearTimeout ( stopconsubmit ) ;
     }
 
-    console.log("End of code run");
+    consoler . log ( "Fin d'exécution du code" ) ;
         }
-})();
+} ) ( ) ;
