@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      2.0.3
 // @description  bls aler  P|R|C Clean Refresh Alarm Notif
-// @author       @Itsmaarouf
+// @author       @elkabouss
 // @match        *://*.blsspainmorocco.com/*
 // @grant        none
 // ==/UserScript==
