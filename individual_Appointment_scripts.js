@@ -58,13 +58,13 @@ itsmaaroufwork Mettre à jour individual_Appointment_scripts.js
             //############################################### ########################
             //############### C'EST LA PIÈCE QUE VOUS DEVEZ CHANGER #######################
             //############################################### ########################
-            var  lastNames  = "Nom de famille" ;
-            var  firstNames  = "Prénom" ;
-            var  naissances  = "aaaa-mm-jj" ; //Date de naissance
-            var  passNumbers  = "Numéro de passeport" ; //Numéro de passeport
-            var  issueDates  = "aaaa-mm-jj" ; //Date de délivrance du passeport
-            var  dateexpiration  = "aaaa-mm-jj" ; //Date d'expiration du passeport
-            var  pptissuePalaces  = "nom de la ville" ; // Lieu de délivrance du passeport
+            var  lastNames  = "elkabouss" ;
+            var  firstNames  = "rachid" ;
+            var  naissances  = "1985-08-27" ; //Date de naissance
+            var  passNumbers  = "DH6507049" ; //Numéro de passeport
+            var  issueDates  = "2018-09-27" ; //Date de délivrance du passeport
+            var  dateexpiration  = "2023-08-27" ; //Date d'expiration du passeport
+            var  pptissuePalaces  = "CASABLANCA" ; // Lieu de délivrance du passeport
             var  franN  = "TG700******" ;
             //############################################### ########################
             //############################################### ########################
